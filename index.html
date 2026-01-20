@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRONCLAD - Get Fit in 90 Days | NYC's #1 Results Gym</title>
+    <meta name="description" content="Busy professional? Get in the best shape of your life in 90 days with our proven system. Book your free trial on WhatsApp now.">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="IRONCLAD - Get Fit in 90 Days | NYC's #1 Results Gym">
+    <meta property="og:description" content="Transform your body in 90 days. Book your free trial on WhatsApp.">
+    <meta property="og:image" content="images/8.jpeg">
+    
+    <link rel="icon" type="image/png" href="images/logo.png">
+    
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#EDF204',
+                        dark: '#050505',
+                        card: '#121212',
+                        whatsapp: '#25D366'
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        heading: ['Oswald', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse-slow 10s infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'wiggle': 'wiggle 1s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        wiggle: {
+                            '0%, 100%': { transform: 'rotate(-3deg)' },
+                            '50%': { transform: 'rotate(3deg)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Hotjar Tracking -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:1234567,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+</head>
+<body class="antialiased selection:bg-brand selection:text-black">
+    
+    <!-- Sticky WhatsApp Button -->
+    <div class="fixed bottom-4 right-4 z-50" id="whatsapp-sticky">
+        <a href="https://wa.me/212781913306?text=Hi%20IRONCLAD!%20I'm%20interested%20in%20the%2090-day%20transformation.%20Can%20we%20chat%20about%20the%20free%20trial?" 
+           target="_blank" 
+           class="whatsapp-cta animate-float bg-whatsapp text-white px-6 py-4 rounded-full shadow-xl flex items-center gap-2 font-bold hover:shadow-2xl transition-all duration-300">
+            <i class="fab fa-whatsapp text-2xl"></i>
+            <span class="hidden md:inline">Chat on WhatsApp</span>
+            <span class="md:hidden">Chat Now</span>
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-40 glass-nav border-b border-white/5 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl md:text-3xl font-heading font-bold italic tracking-tighter relative">
+                IRON<span class="text-brand">CLAD</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-6 font-heading uppercase tracking-wider text-sm">
+                <a href="#transformation" class="nav-link hover:text-brand transition">90-Day Plan</a>
+                <a href="#results" class="nav-link hover:text-brand transition">Results</a>
+                <a href="#pricing" class="nav-link hover:text-brand transition">Pricing</a>
+            </div>
+
+            <!-- Desktop WhatsApp CTA -->
+            <a href="https://wa.me/212781913306?text=Hi%20IRONCLAD!%20I'd%20like%20to%20book%20a%20free%20trial%20session." 
+               target="_blank"
+               class="hidden md:flex items-center gap-2 bg-whatsapp text-white font-heading font-bold uppercase tracking-wider px-5 py-2 rounded-sm hover:bg-green-500 transition duration-300">
+                <i class="fab fa-whatsapp"></i>
+                Free Trial
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-2xl text-white relative z-50 focus:outline-none">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Fullscreen Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black z-40 menu-closed flex flex-col items-center justify-center space-y-8 h-screen w-full md:hidden">
+        <a href="#transformation" class="text-3xl font-heading font-bold uppercase text-white hover:text-brand mobile-link">90-Day Plan</a>
+        <a href="#results" class="text-3xl font-heading font-bold uppercase text-white hover:text-brand mobile-link">Results</a>
+        <a href="#pricing" class="text-3xl font-heading font-bold uppercase text-white hover:text-brand mobile-link">Pricing</a>
+        <a href="https://wa.me/212781913306?text=Hi%20IRONCLAD!%20I'm%20on%20your%20website%20and%20want%20to%20book%20a%20free%20trial." 
+           target="_blank"
+           class="bg-whatsapp text-white px-8 py-3 font-heading font-bold uppercase tracking-wider mt-4 flex items-center gap-2">
+            <i class="fab fa-whatsapp"></i>
+            Book Free Trial
+        </a>
+    </div>
+
+    <!-- Hero Section - Conversion Optimized -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="/images/8.jpeg" class="w-full h-full object-cover opacity-70 scale-110 animate-pulse-slow" alt="Professional achieving fitness transformation">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/70 to-[#050505]/90"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <!-- Trust Badge -->
+            <div data-aos="fade-down">
+                <div class="inline-flex items-center gap-2 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-brand/30">
+                    <i class="fas fa-star text-brand"></i>
+                    <span class="text-xs font-heading tracking-[0.2em] uppercase text-gray-300">#1 Rated Gym in NYC • 2,347+ Transformations</span>
+                </div>
+            </div>
+            
+            <!-- Main Headline -->
+            <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-heading font-bold leading-[0.9] mt-8 text-white">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand to-yellow-600" data-aos="fade-up">GET FIT</span>
+                <br>
+                <span data-aos="fade-up" data-aos-delay="100">IN 90 DAYS</span>
+            </h1>
+            
+            <!-- Subheadline -->
+            <p class="mt-6 text-xl md:text-2xl font-light text-gray-300 max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                <span class="text-brand font-bold">Busy professional?</span> Our proven 90-day system gets you in the best shape of your life—or your money back.
+            </p>
+
+            <!-- Social Proof -->
+            <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 text-gray-400 text-sm" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex items-center gap-2">
+                    <div class="flex -space-x-2">
+                        <img src="/images/p1.jpg" class="w-8 h-8 rounded-full border-2 border-dark" alt="Client">
+                        <img src="/images/p2.jpg" class="w-8 h-8 rounded-full border-2 border-dark" alt="Client">
+                        <img src="/images/p3.jpg" class="w-8 h-8 rounded-full border-2 border-dark" alt="Client">
+                    </div>
+                    <span>2,347+ successful transformations</span>
+                </div>
+                <div class="hidden sm:block">•</div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-shield-alt text-brand"></i>
+                    <span>90-Day Money-Back Guarantee</span>
+                </div>
+            </div>
+
+            <!-- Primary WhatsApp CTA -->
+            <div class="mt-10" data-aos="fade-up" data-aos-delay="400">
+                <a href="https://wa.me/212781913306?text=Hi%20IRONCLAD!%20I%20want%20to%20transform%20my%20body%20in%2090%20days.%20Can%20I%20book%20a%20free%20trial%20session%20via%20WhatsApp?" 
+                   target="_blank"
+                   class="inline-flex items-center justify-center gap-3 bg-whatsapp text-white px-8 py-4 rounded-sm hover:bg-green-500 transition-all duration-300 transform hover:scale-105 shadow-2xl font-heading font-bold text-lg md:text-xl uppercase tracking-wider max-w-md mx-auto">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    <div class="text-left">
+                        <div class="text-sm font-normal normal-case">BOOK YOUR FREE TRIAL</div>
+                        <div class="text-xs font-light normal-case">Chat with a coach on WhatsApp</div>
+                    </div>
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+                
+                <!-- Microcopy -->
+                <p class="mt-3 text-gray-400 text-sm">
+                    <i class="fas fa-clock text-brand mr-1"></i>
+                    Average reply time: 2 minutes
+                </p>
+            </div>
+
+            <!-- Secondary CTA -->
+            <div class="mt-8" data-aos="fade-up" data-aos-delay="500">
+                <a href="#transformation" class="text-gray-400 hover:text-white transition flex items-center justify-center gap-2">
+                    <span>See the 90-day transformation plan</span>
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Bar -->
+    <div class="bg-dark border-y border-white/10 py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 text-gray-400 text-sm">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-trophy text-brand"></i>
+                    <span>NYC's #1 Gym 2024</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-user-check text-brand"></i>
+                    <span>97% Client Satisfaction</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-clock text-brand"></i>
+                    <span>24/7 Coach Support</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-shield-alt text-brand"></i>
+                    <span>90-Day Guarantee</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 90-Day Transformation Section -->
+    <section id="transformation" class="py-16 md:py-24 bg-dark">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-heading font-bold mb-4">
+                    Your <span class="text-brand">90-Day</span> Journey
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Designed for busy professionals who want real results without the guesswork
+                </p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="max-w-4xl mx-auto">
+                <!-- Week 1-4 -->
+                <div class="flex flex-col md:flex-row gap-8 items-center mb-12" data-aos="fade-up">
+                    <div class="md:w-1/3 text-center md:text-right">
+                        <div class="bg-card p-6 rounded-sm border-l-4 border-brand">
+                            <h3 class="text-2xl font-heading font-bold mb-2">Weeks 1-4</h3>
+                            <p class="text-brand font-bold">Foundation Phase</p>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 bg-card p-6 rounded-sm border border-white/10">
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-brand mt-1"></i>
+                                <span><strong>Personalized assessment</strong> with your dedicated coach</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-brand mt-1"></i>
+                                <span><strong>3 weekly strength sessions</strong> (45 min each)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-brand mt-1"></i>
+                                <span><strong>Nutrition blueprint</strong> tailored to your lifestyle</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Week 5-8 -->
+                <div class="flex flex-col md:flex-row gap-8 items-center mb-12" data-aos="fade-up" data-aos-delay="100">
+                    <div class="md:w-1/3 text-center md:text-right order-2 md:order-1">
+                        <div class="bg-card p-6 rounded-sm border-l-4 border-brand">
+                            <h3 class="text-2xl font-heading font-bold mb-2">Weeks 5-8</h3>
+                            <p class="text-brand font-bold">Transformation Phase</p>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 bg-card p-6 rounded-sm border border-white/10 order-1 md:order-2">
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-brand mt-1"></i>
+                                <span><strong>Increased intensity</strong> with progressive overload</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-brand mt-1"></i>
+                                <span><strong>Bi-weekly progress check-ins</strong> via WhatsApp</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-brand mt-1"></i>
+                                <span><strong>Recovery optimization</strong> with sauna & ice bath access</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Week 9-12 -->
+                <div class="flex flex-col md:flex-row gap-8 items-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="md:w-1/3 text-center md:text-right">
+                        <div class="bg-card p-6 rounded-sm border-l-4 border-brand">
+                            <h3 class="text-2xl font-heading font-bold mb-2">Weeks 9-12</h3>
+                            <p class="text-brand font-bold">Results Phase</p>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 bg-card p-6 rounded-sm border border-white/10">
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-brand mt-1"></i>
+                                <span><strong>Peak performance training</strong> for maximum results</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-brand mt-1"></i>
+                                <span><strong>Final assessment</strong> and progress photos</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-brand mt-1"></i>
+                                <span><strong>Maintenance plan</strong> for long-term success</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mid-Page WhatsApp CTA -->
+            <div class="mt-16 text-center" data-aos="fade-up">
+                <div class="bg-card border border-brand/30 rounded-sm p-8 max-w-2xl mx-auto">
+                    <h3 class="text-2xl font-heading font-bold mb-4">
+                        Ready to Start Your Transformation?
+                    </h3>
+                    <p class="text-gray-400 mb-6">
+                        Chat with a coach now to see if you're a good fit for our 90-day program
+                    </p>
+                    <a href="https://wa.me/212781913306?text=I'm%20interested%20in%20the%2090-day%20transformation%20program.%20Can%20you%20tell%20me%20more%20about%20the%20free%20trial?" 
+                       target="_blank"
+                       class="inline-flex items-center gap-3 bg-whatsapp text-white px-6 py-3 rounded-sm hover:bg-green-500 transition font-heading font-bold uppercase">
+                        <i class="fab fa-whatsapp"></i>
+                        ASK A COACH ON WHATSAPP
+                    </a>
+                    <p class="mt-3 text-sm text-gray-500">
+                        No commitment • Free trial session • Get all your questions answered
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results & Social Proof -->
+    <section id="results" class="py-16 md:py-24 bg-card">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-heading font-bold mb-4">
+                    Real <span class="text-brand">Results</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    See what busy professionals like you have achieved in 90 days
+                </p>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <!-- Testimonial 1 -->
+                <div class="bg-dark p-6 rounded-sm border border-white/10" data-aos="fade-up">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="/images/p4.jpg" class="w-12 h-12 rounded-full" alt="Client">
+                        <div>
+                            <h4 class="font-bold">Michael R.</h4>
+                            <p class="text-sm text-gray-500">Software Engineer, 34</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic mb-4">
+                        "As a busy developer, I thought I'd never have time to get fit. IRONCLAD's 90-day program changed everything. Lost 28lbs while gaining strength."
+                    </p>
+                    <div class="flex items-center text-brand">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-dark p-6 rounded-sm border border-white/10" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="/images/p5.jpg" class="w-12 h-12 rounded-full" alt="Client">
+                        <div>
+                            <h4 class="font-bold">Sarah L.</h4>
+                            <p class="text-sm text-gray-500">Marketing Director, 42</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic mb-4">
+                        "The WhatsApp support made all the difference. My coach was always available when I had questions. Transformed my body and energy levels."
+                    </p>
+                    <div class="flex items-center text-brand">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-dark p-6 rounded-sm border border-white/10" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="/images/p6.jpg" class="w-12 h-12 rounded-full" alt="Client">
+                        <div>
+                            <h4 class="font-bold">David T.</h4>
+                            <p class="text-sm text-gray-500">Lawyer, 38</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic mb-4">
+                        "90-day money-back guarantee gave me confidence to start. Never needed it—the results were incredible. Best investment in myself ever."
+                    </p>
+                    <div class="flex items-center text-brand">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Objection Handling -->
+            <div class="bg-dark border border-white/10 rounded-sm p-8 max-w-3xl mx-auto" data-aos="fade-up">
+                <h3 class="text-2xl font-heading font-bold mb-6 text-center">
+                    Common Concerns - <span class="text-brand">Addressed</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-white mb-2">"I'm too busy"</h4>
+                            <p class="text-gray-400 text-sm">Our 45-minute sessions are designed for maximum efficiency. Plus, 24/7 access means you train on your schedule.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white mb-2">"I'm a beginner"</h4>
+                            <p class="text-gray-400 text-sm">90% of our clients start as beginners. Our coaches specialize in safe, progressive training for all levels.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-white mb-2">"It's too expensive"</h4>
+                            <p class="text-gray-400 text-sm">With our 90-day money-back guarantee, you risk nothing. Plus, health is your most valuable investment.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white mb-2">"Gyms are intimidating"</h4>
+                            <p class="text-gray-400 text-sm">Our private facility and supportive community eliminate gym intimidation. You'll feel at home from day one.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing with WhatsApp Booking -->
+    <section id="pricing" class="py-16 md:py-24 bg-dark">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-heading font-bold mb-4">
+                    Simple <span class="text-brand">Pricing</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Choose your plan and book your free trial directly via WhatsApp
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Essential Plan -->
+                <div class="bg-card p-8 rounded-sm border border-white/10" data-aos="fade-up">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-heading font-bold mb-2">ESSENTIAL</h3>
+                        <div class="flex items-baseline">
+                            <span class="text-4xl font-bold">$49</span>
+                            <span class="text-gray-500 ml-2">/month</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-brand"></i>
+                            <span>24/7 Gym Access</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-brand"></i>
+                            <span>Basic Equipment Zones</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-brand"></i>
+                            <span>Locker Room Access</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/212781913306?text=I'm%20interested%20in%20the%20Essential%20plan%20(%2449/month).%20Can%20I%20book%20a%20free%20trial?" 
+                       target="_blank"
+                       class="block w-full bg-transparent border border-white text-white py-3 text-center font-heading uppercase tracking-wider hover:bg-white hover:text-black transition">
+                        Book Free Trial
+                    </a>
+                </div>
+
+                <!-- Athlete Plan (Featured) -->
+                <div class="bg-card p-8 rounded-sm border-2 border-brand relative transform md:scale-105" data-aos="zoom-in">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-brand text-black px-4 py-1 font-heading font-bold text-sm">
+                        MOST POPULAR
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-heading font-bold mb-2 text-brand">ATHLETE</h3>
+                        <div class="flex items-baseline">
+                            <span class="text-5xl font-bold">$89</span>
+                            <span class="text-gray-500 ml-2">/month</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-brand"></i>
+                            <span><strong>90-Day Transformation Program</strong></span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-brand"></i>
+                            <span>Personal Coach & WhatsApp Support</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-brand"></i>
+                            <span>All Classes Unlimited</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-brand"></i>
+                            <span>Sauna & Recovery Suite</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/212781913306?text=Hi%20IRONCLAD!%20I'm%20on%20your%20website%20and%20want%20to%20book%20a%20free%20trial." 
+                       target="_blank"
+                       class="block w-full bg-brand text-black py-3 text-center font-heading font-bold uppercase tracking-wider hover:bg-white transition">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        BOOK FREE TRIAL ON WHATSAPP
+                    </a>
+                    <p class="text-center text-sm text-gray-500 mt-3">
+                        Includes free trial session + assessment
+                    </p>
+                </div>
+
+                <!-- Elite Plan -->
+                <div class="bg-card p-8 rounded-sm border border-white/10" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-heading font-bold mb-2">ELITE</h3>
+                        <div class="flex items-baseline">
+                            <span class="text-4xl font-bold">$149</span>
+                            <span class="text-gray-500 ml-2">/month</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-brand"></i>
+                            <span><strong>Everything in Athlete</strong></span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-brand"></i>
+                            <span>3x Weekly Personal Training</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-brand"></i>
+                            <span>Custom Nutrition Planning</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-brand"></i>
+                            <span>Private Locker & Amenities</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/212781913306?text=Hi%20IRONCLAD!%20I'm%20on%20your%20website%20and%20want%20to%20book%20a%20free%20trial." 
+                       target="_blank"
+                       class="block w-full bg-transparent border border-white text-white py-3 text-center font-heading uppercase tracking-wider hover:bg-white hover:text-black transition">
+                        Book Free Trial
+                    </a>
+                </div>
+            </div>
+
+            <!-- Guarantee -->
+            <div class="mt-16 text-center max-w-2xl mx-auto" data-aos="fade-up">
+                <div class="bg-card border border-brand/30 p-6 rounded-sm">
+                    <h3 class="text-2xl font-heading font-bold mb-4">
+                        <i class="fas fa-shield-alt text-brand mr-2"></i>
+                        90-Day Money-Back Guarantee
+                    </h3>
+                    <p class="text-gray-400">
+                        If you don't see remarkable results in 90 days, we'll refund your entire investment. No questions asked.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-16 md:py-24 bg-gradient-to-b from-dark to-black">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-heading font-bold mb-6" data-aos="fade-up">
+                Your Transformation Starts Now
+            </h2>
+            <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                Don't wait another 90 days wishing you started today
+            </p>
+
+            <!-- Final WhatsApp CTA -->
+            <div data-aos="fade-up" data-aos-delay="200">
+                <a href="https://wa.me/212781913306?text=Hi%20IRONCLAD!%20I'm%20on%20your%20website%20and%20want%20to%20book%20a%20free%20trial." 
+                   target="_blank"
+                   class="inline-flex items-center justify-center gap-4 bg-whatsapp text-white px-10 py-5 rounded-sm hover:bg-green-500 transition-all duration-300 transform hover:scale-105 shadow-2xl font-heading font-bold text-xl uppercase tracking-wider animate-wiggle">
+                    <i class="fab fa-whatsapp text-3xl"></i>
+                    <div class="text-left">
+                        <div>CHAT WITH A COACH NOW</div>
+                        <div class="text-sm font-normal normal-case">Free trial session • No commitment</div>
+                    </div>
+                    <i class="fas fa-bolt text-yellow-300"></i>
+                </a>
+            </div>
+
+            <!-- Contact Options -->
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-card p-6 rounded-sm border border-white/10">
+                    <i class="fab fa-whatsapp text-3xl text-whatsapp mb-4"></i>
+                    <h4 class="font-heading font-bold text-lg mb-2">WhatsApp</h4>
+                    <p class="text-gray-400 text-sm mb-4">Fastest response time (2 min avg)</p>
+                    <a href="https://wa.me/212781913306" target="_blank" class="text-brand hover:text-white transition">
+                        +212 781 913 306
+                    </a>
+                </div>
+                <div class="bg-card p-6 rounded-sm border border-white/10">
+                    <i class="fas fa-phone text-3xl text-gray-400 mb-4"></i>
+                    <h4 class="font-heading font-bold text-lg mb-2">Phone</h4>
+                    <p class="text-gray-400 text-sm mb-4">Mon-Fri, 6AM-10PM EST</p>
+                    <a href="tel:+212781913306" class="text-brand hover:text-white transition">
+                        +212 781 913 306
+                    </a>
+                </div>
+                <div class="bg-card p-6 rounded-sm border border-white/10">
+                    <i class="fas fa-envelope text-3xl text-gray-400 mb-4"></i>
+                    <h4 class="font-heading font-bold text-lg mb-2">Email</h4>
+                    <p class="text-gray-400 text-sm mb-4">Response within 24 hours</p>
+                    <a href="mailto:ayoubprograma@gmail.com" class="text-brand hover:text-white transition">
+                        ayoubprograma@gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-white/10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <a href="#" class="text-3xl font-heading font-bold italic tracking-tighter text-white">
+                        IRON<span class="text-brand">CLAD</span>
+                    </a>
+                    <p class="text-gray-400 mt-2 text-sm">
+                        1024 Iron St, Brooklyn, NY • Open 24/7
+                    </p>
+                </div>
+                
+                <div class="flex gap-6">
+                    <a href="https://www.instagram.com/ayoubweb2" target="_blank" class="text-gray-400 hover:text-brand transition">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://tiktok.com/@ironclad" target="_blank" class="text-gray-400 hover:text-brand transition">
+                        <i class="fab fa-tiktok text-xl"></i>
+                    </a>
+                    <a href="https://youtube.com/@ironclad" target="_blank" class="text-gray-400 hover:text-brand transition">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-white/10 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 Ironclad Fitness. All Rights Reserved. | <a href="#" class="hover:text-brand transition">Privacy Policy</a> | <a href="#" class="hover:text-brand transition">Terms</a></p>
+                <p class="mt-2 text-xs">Results may vary. 90-day guarantee applies to Athlete and Elite plans only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Modal (Hidden by default) -->
+    <div id="whatsapp-modal" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black/70"></div>
+        <div class="relative flex items-center justify-center min-h-screen p-4">
+            <div class="bg-card rounded-sm max-w-md w-full p-8 border border-brand/30">
+                <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+                <h3 class="text-2xl font-heading font-bold mb-4">Book Your Free Trial</h3>
+                <p class="text-gray-400 mb-6">Choose how you'd like to connect with a coach:</p>
+                <div class="space-y-4">
+                    <a href="https://wa.me/212781913306?text=Hi%20IRONCLAD!%20I%20want%20to%20transform%20my%20body%20in%2090%20days.%20Can%20I%20book%20a%20free%20trial%20session%20via%20WhatsApp?" 
+                       target="_blank"
+                       class="block bg-whatsapp text-white p-4 text-center rounded-sm hover:bg-green-500 transition font-bold">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        Chat on WhatsApp (2 min response)
+                    </a>
+                    <a href="tel:+212781913306" 
+                       class="block bg-dark border border-white/30 text-white p-4 text-center rounded-sm hover:bg-white hover:text-black transition font-bold">
+                        <i class="fas fa-phone mr-2"></i>
+                        Call Now
+                    </a>
+                </div>
+                <p class="text-sm text-gray-500 mt-6 text-center">
+                    <i class="fas fa-clock mr-1"></i>
+                    Free trial sessions book fast. Secure yours now.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- External Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
