@@ -26,17 +26,13 @@ Live demo: [https://landing-page-gym-blush.vercel.app](https://landing-page-gym-
 
 LandingPageGym/
 
-
-│   index.html
-│
-├───css
-│       style.css
-│
-├───documentation
-│       index.html
-│
-├───images
-│       1.jpg
+├── index.html
+├── css/
+│ └── style.css
+├── js/
+│ └── main.js
+├── images/
+│ └──│  1.jpg
 │       2.jpg
 │       3.jpg
 │       4.jpg
@@ -46,8 +42,8 @@ LandingPageGym/
 │       8.jpeg
 │       logo.png
 │       p1.jpg
-
-
+└── documentation/
+└── index.html
 ---
 
 ## Getting Started
