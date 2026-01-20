@@ -25,6 +25,8 @@ Live demo: [https://landing-page-gym-blush.vercel.app](https://landing-page-gym-
 ## File Structure
 
 LandingPageGym/
+
+
 │   index.html
 │
 ├───css
