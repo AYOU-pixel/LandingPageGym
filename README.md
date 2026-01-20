@@ -27,23 +27,24 @@ Live demo: [https://landing-page-gym-blush.vercel.app](https://landing-page-gym-
 LandingPageGym/
 ├── index.html
 ├── css/
-│ └── style.css
+│   └── style.css
 ├── js/
-│ └── main.js
+│   └── main.js
 ├── images/
-│ ├── 1.jpg
-│ ├── 2.jpg
-│ ├── 3.jpg
-│ ├── 4.jpg
-│ ├── 5.jpg
-│ ├── 6.jpeg
-│ ├── 7.jpeg
-│ ├── 8.jpeg
-│ ├── logo.png
-│ ├── p1.jpg
-│ └── p2.jpg
+│   ├── 1.jpg
+│   ├── 2.jpg
+│   ├── 3.jpg
+│   ├── 4.jpg
+│   ├── 5.jpg
+│   ├── 6.jpeg
+│   ├── 7.jpeg
+│   ├── 8.jpeg
+│   ├── logo.png
+│   ├── p1.jpg
+│   └── p2.jpg
 └── documentation/
-└── index.html
+    └── index.html
+
 
 
 ---
