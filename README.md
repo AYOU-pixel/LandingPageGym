@@ -1,6 +1,6 @@
 # IRONCLAD Gym Landing Page
 
-A high-conversion, WhatsApp-first HTML landing page template for gyms, fitness studios, and personal trainers. Designed to convert visitors into leads and trial bookings in **30–90 days**.
+A high-conversion, WhatsApp-first HTML landing page template for gyms, fitness studios, and personal trainers. Designed to convert visitors into leads and trial bookings within **30–90 days**.
 
 ---
 
@@ -12,58 +12,60 @@ Live demo: [https://landing-page-gym-blush.vercel.app](https://landing-page-gym-
 
 ## Features
 
-- **Conversion-focused structure**: Hero → Promise → Proof → Pricing → Call-to-Action
-- **WhatsApp-first lead capture**: Sticky buttons, pre-filled messages
-- **90-day transformation system**: Clear weekly breakdown
-- **Social proof & trust elements**: Testimonials, transformation counts, badges
-- **Objection handling sections**: Overcome common excuses before pricing
-- **Pricing designed for upsell**: Three tiers with middle-plan highlight
-- **Mobile-first & fast**: Tailwind CSS, responsive design, optimized assets
+- **Conversion-focused structure**: Hero → Promise → Proof → Pricing → Call-to-Action  
+- **WhatsApp-first lead capture**: Sticky buttons, pre-filled messages  
+- **90-day transformation system**: Clear weekly breakdown  
+- **Social proof & trust elements**: Testimonials, transformation counts, badges  
+- **Objection-handling sections**: Overcome common objections before pricing  
+- **Pricing designed for upsells**: Three tiers with middle-plan highlight  
+- **Mobile-first & fast**: Tailwind CSS, responsive design, optimized assets  
 
 ---
 
 ## File Structure
 
 LandingPageGym/
-
 ├── index.html
 ├── css/
 │ └── style.css
 ├── js/
 │ └── main.js
 ├── images/
-│ └──│  1.jpg
-│       2.jpg
-│       3.jpg
-│       4.jpg
-│       5.jpg
-│       6.jpeg
-│       7.jpeg
-│       8.jpeg
-│       logo.png
-│       p1.jpg
+│ ├── 1.jpg
+│ ├── 2.jpg
+│ ├── 3.jpg
+│ ├── 4.jpg
+│ ├── 5.jpg
+│ ├── 6.jpeg
+│ ├── 7.jpeg
+│ ├── 8.jpeg
+│ ├── logo.png
+│ ├── p1.jpg
+│ └── p2.jpg
 └── documentation/
 └── index.html
+
+
 ---
 
 ## Getting Started
 
-1. Clone the repo:
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/AYOU-pixel/LandingPageGym.git
 Open index.html in your browser to preview.
 
-Edit images in images/ and update content as needed.
+Edit images in the images/ folder and update content as needed.
 
 Replace the WhatsApp number in all CTA links with your own.
 
 Customization
-Gym name & location: Search for IRONCLAD and replace it.
+Gym Name & Location: Search for IRONCLAD and replace it with your gym name.
 
-WhatsApp number: Replace all instances of https://wa.me/212781913306 with your number.
+WhatsApp Number: Replace all instances of https://wa.me/212781913306 with your number.
 
-Pricing & offers: Adjust 90-day program, pricing tiers, and guarantees.
+Pricing & Offers: Adjust the 90-day program, pricing tiers, and guarantees.
 
 Sections: Remove or duplicate sections as needed (all sections are commented in index.html).
 
@@ -88,7 +90,7 @@ Google Fonts
 AOS – Animate On Scroll
 
 Publishing
-This is a static site. You can publish it using:
+This is a static website. You can publish it using:
 
 GitHub Pages
 
@@ -105,8 +107,6 @@ This template is for personal and commercial use. Do not redistribute without pe
 
 ---
 
-This README is **clean, professional, and clear for anyone using or buying your template**.  
+If you want, I can **also add a professional section explaining how this landing page converts visitors into leads and generates revenue** — this makes the README look like a product-ready template for clients or marketplaces.  
 
-If you want, I can also **rewrite it to include a “How this page makes money / converts leads” section**, which makes it **look like a pro product** for clients or sales platforms.  
-
-Do you want me to do that next?
+Do you want me to add that section next?
