@@ -45,8 +45,6 @@ LandingPageGym/
 └── documentation/
     └── index.html
 
-
-
 ---
 
 ## Getting Started
